@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" manifest="manifest.appcache">
+  <head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/public/favicon.ico"  type="image/x-icon" />
+    <!--[if IE]><link rel="shortcut icon" href="/public/favicon.ico"  type="image/x-icon" /><![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="/public/apple-touch-icon-precomposed.png" />
+
+    <!--<link rel="stylesheet" href="/public/css/custom.css">-->
+    <!--<script src="/public/js/custom.js"></script>-->
+    <!--<link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')
+    </script>-->
+    <!--<link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.min.css">-->
+<!--[if IE 7]>
+    <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+    <link rel="stylesheet" href="/public/css/main.css">
+  </head>
+  <body>
+    <!-- Add your site or application content here -->
+	  <h1>Hello World</h1>
+
+    <!-- Debugger - remove for production -->
+    <!--<script src="https://getfirebug.com/firebug-lite.js"></script>-->
+
+<!--script type="text/javascript">
+//check if app is installed
+var manifestUrl = location.href.substring(0, location.href.lastIndexOf('/'))+'/manifest.webapp';
+// alert(manifestUrl);
+if( navigator.mozApps != undefined ){
+var app_stat = navigator.mozApps.getSelf();
+app_stat.onsuccess = function() {
+  if (app_stat.result) {
+        //instsalled
+  } else {
+        // not installed
+        var app_install = navigator.mozApps.install(manifestUrl);
+        app_install.onsuccess = function() {
+        };
+        app_install.onerror = function() {
+        };
+  }
+};
+app_stat.onerror = function() {
+  alert('Error checking installation status: '+ this.error.message);
+};
+}
+</script-->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));
+    </script>-->
+  </body>
+</html>
