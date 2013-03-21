@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="UTF-8">
+	<title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/public/favicon.ico"  type="image/x-icon" />
+    <!--[if IE]><link rel="shortcut icon" href="/public/favicon.ico"  type="image/x-icon" /><![endif]-->
+    <link rel="apple-touch-icon-precomposed" href="/public/apple-touch-icon-precomposed.png" />
+
+    <!--<link rel="stylesheet" href="/public/css/custom.css">-->
+    <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+    <link rel="stylesheet" href="/public/lib/font-awesome/css/font-awesome-ie7.min.css">
+<![endif]-->
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" type="text/css" href="style/headers.css">
+    <link rel="stylesheet" type="text/css" href="style/input_areas.css">
+    <link rel="stylesheet" type="text/css" href="style/buttons.css">
+  </head>
+  <body role="application">
+
+    <!-- header -->
+    <section role="region">
+        <header>
+        <!--menu type="toolbar">
+        <a href="#"><span class="icon icon-edit">about</span></a>
+        <a href="#"><span class="icon icon-send">help</span></a>
+        </menu-->
+        <h1><i class="icon-beaker"></i> BMI</h1>
+        </header>
+    </section>
+
+    <!-- Add your site or application content here -->
+    <form id="bmi_form">
+    <fieldset>
+      <label for="height">Height:</label>
+      <p>
+        <input id="height" type="number" placeholder="cm" required>
+        <button type="reset">Clear</button>
+      </p>
+
+      <label for="weight">Weight:</label>
+      <p>
+        <input id="weight" type="number" placeholder="kg" required>
+        <button type="reset">Clear</button>
+      </p>
+      <p>
+      <button id="calc_bmi">Calc</button>
+      </p>
+    </fieldset>
+    </form>
+    <!-- Debugger - remove for production -->
+    <!--<script src="https://getfirebug.com/firebug-lite.js"></script>-->
+
+<script type="text/javascript">
+//check if app is installed
+var manifestUrl = location.href.substring(0, location.href.lastIndexOf('/'))+'/manifest.webapp';
+// alert(manifestUrl);
+if( navigator.mozApps != undefined ){
+var app_stat = navigator.mozApps.getSelf();
+app_stat.onsuccess = function() {
+  if (app_stat.result) {
+        //instsalled
+  } else {
+        // not installed
+        var app_install = navigator.mozApps.install(manifestUrl);
+        app_install.onsuccess = function() {
+        };
+        app_install.onerror = function() {
+        };
+  }
+};
+app_stat.onerror = function() {
+  alert('Error checking installation status: '+ this.error.message);
+};
+}
+</script>
+
+    <script src="/public/js/custom.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--<script>
+        var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));
+    </script>-->
+  </body>
+</html>
