@@ -1,13 +1,13 @@
 {
     "version": "1.0",
     "name": "BMI",
-    "launch_path": "/public/index.html",
+    "launch_path": "/fxosbmi/public/index.html",
     "description": "BMI Calculator",
     "icons":{
-        "128": "/public/img/icon128.png"
+        "128": "/fxosbmi/public/img/icon128.png"
     },
     "developer": {
-        "name": "Fred Lin",
+        "name": "gasolin",
         "url": "https://github.com/gasolin/fxosbmi"
     },
     "installs_allowed_from": ["*"],
