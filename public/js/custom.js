@@ -5,9 +5,16 @@ var bmiform = document.getElementById('bmi_form');
 var show_result = document.getElementById('bmi_result');
 var show_suggest = document.getElementById('bmi_suggest');
 
+var about = document.getElementById('about');
+
 calc.addEventListener('click', function(e) {
 	e.preventDefault();
 	calculateBmi();
+});
+
+about.addEventListener('click', function(e) {
+	e.preventDefault();
+	about_page();
 });
 
 function calculateBmi() {
@@ -25,5 +32,9 @@ function calculateBmi() {
     } else {
    	  show_suggest.innerHTML = '體型很棒喔';
     }
- }
+  }
+}
+
+function about_page() {
+  alert('ooxx');
 }

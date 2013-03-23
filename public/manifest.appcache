@@ -1,6 +1,23 @@
 CACHE MANIFEST
+# Time: Sat Mar 23 2013 21:10:56 GMT+0800 (CST)
 
 CACHE:
+favicon.ico
+apple-touch-icon-precomposed.png
+index.html
+js/app_installer.js
+js/custom.js
+css/custom.css
+css/main.css
+img/icon128.png
+lib/font-awesome/css/font-awesome-ie7.min.css
+lib/font-awesome/css/font-awesome.css
+lib/font-awesome/css/font-awesome.min.css
+lib/font-awesome/font/fontawesome-webfont.eot
+lib/font-awesome/font/fontawesome-webfont.svg
+lib/font-awesome/font/fontawesome-webfont.ttf
+lib/font-awesome/font/fontawesome-webfont.woff
+lib/font-awesome/font/FontAwesome.otf
 
 NETWORK:
 *
