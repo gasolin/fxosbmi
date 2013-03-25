@@ -32,6 +32,9 @@ function calculateBmi() {
     } else {
    	  show_suggest.innerHTML = '體型很棒喔';
     }
+  } else {
+    show_result.innerHTML = '';
+    show_suggest.innerHTML = '請輸入身高體重';
   }
 }
 
