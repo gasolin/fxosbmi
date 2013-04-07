@@ -5,7 +5,7 @@ BMI demo for FxOS
 
 checkout gh-pages branch for the working demo.
 
-* DEMO (http://gasolin.github.com/fxosbmi/public/index.html)
+* [DEMO](http://gasolin.github.io/fxosbmi/public/index.html) : http://gasolin.github.io/fxosbmi/public/index.html
 
 To get the full example, please switched to [gh-pages](https://github.com/gasolin/fxosbmi/tree/gh-pages) branch and hit zip button to download the sample.
 
