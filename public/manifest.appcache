@@ -1,23 +1,21 @@
 CACHE MANIFEST
-# Time: Mon Mar 25 2013 23:27:59 GMT+0800 (CST)
+# Time: Tue Apr 09 2013 15:39:54 GMT+0800 (CST)
 
 CACHE:
-favicon.ico
-apple-touch-icon-precomposed.png
 index.html
+simplemap.html
 js/app_installer.js
 js/custom.js
-css/custom.css
-css/main.css
-img/icon128.png
 style/action_menu.css
 style/buttons.css
 style/confirm.css
+style/custom.css
 style/drawer.css
 style/edit_mode.css
 style/headers.css
 style/input_areas.css
 style/lists.css
+style/main.css
 style/progress_activity.css
 style/scrolling.css
 style/seekbars.css
@@ -25,6 +23,9 @@ style/status.css
 style/switches.css
 style/tabs.css
 style/toolbars.css
+style/icons/favicon.ico
+style/icons/apple-touch-icon-precomposed.png
+style/icons/icon128.png
 style/action_menu/images/ui/alpha.png
 style/action_menu/images/ui/default.png
 style/action_menu/images/ui/gradient.png
