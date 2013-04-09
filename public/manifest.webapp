@@ -4,7 +4,7 @@
     "launch_path": "/fxosbmi/public/index.html",
     "description": "BMI Calculator",
     "icons":{
-        "128": "/fxosbmi/public/img/icon128.png"
+        "128": "/fxosbmi/public/style/icons/icon128.png"
     },
     "developer": {
         "name": "gasolin",
