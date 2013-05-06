@@ -17,13 +17,18 @@ about.addEventListener('click', function(e) {
 	about_page();
 });
 
+function calc_bmi(weight, height) {
+  var val = weight / (height * height / 10000);
+  console.log(val.toFixed(2));
+  return val.toFixed(2);
+}
+
 function calculateBmi() {
   var height = parseFloat(bmiform.height.value);
   var weight = parseFloat(bmiform.weight.value);
   if(weight > 0 && height > 0){
-    var BMI = weight / (height / 100 * height / 100);
-    console.log(BMI.toFixed(2));
-    show_result.innerHTML = 'Your BMI is ' + BMI.toFixed(2);
+    var BMI = calc_bmi(weight, height);
+    show_result.innerHTML = 'Your BMI is ' + BMI;
     // Give health advice
     if (BMI > 25) {
    	  show_suggest.innerHTML = '你該節食了';
