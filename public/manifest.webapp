@@ -2,7 +2,6 @@
     "version": "1.1.0",
     "name": "BMI",
     "launch_path": "index.html",
-    "appcache_path": "manifest.webapp",
     "description": "BMI Calculator, Estimate you body status based on your weight and height",
     "icons":{
         "128": "style/icons/icon128.png"
