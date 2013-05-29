@@ -1,9 +1,8 @@
 CACHE MANIFEST
-# Time: Mon May 06 2013 14:51:21 GMT+0800 (CST)
+# Time: Wed May 29 2013 11:47:44 GMT+0800 (CST)
 
 CACHE:
 index.html
-simplemap.html
 js/app_installer.js
 js/custom.js
 style/action_menu.css
