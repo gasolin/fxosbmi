@@ -1,48 +1,66 @@
 'use strict';
 
-var calc = document.getElementById('calc_bmi');
-var bmiform = document.getElementById('bmi_form');
-var show_result = document.getElementById('bmi_result');
-var show_suggest = document.getElementById('bmi_suggest');
+var BMICalc = {
 
-var about = document.getElementById('about');
+  init: function calc_init() {
+    this.getAllElements();
 
-calc.addEventListener('click', function(e) {
-	e.preventDefault();
-	calculateBmi();
-});
+    this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
+    this.about.addEventListener('click', this.aboutPage);
 
-about.addEventListener('click', function(e) {
-	e.preventDefault();
-	about_page();
-});
+  },
 
-function calc_bmi(weight, height) {
-  var val = weight / (height * height / 10000);
-  console.log(val.toFixed(2));
-  return val.toFixed(2);
-}
+  toCamelCase: function toCamelCase(str) {
+    return str.replace(/\-(.)/g, function replacer(str, p1) {
+      return p1.toUpperCase();
+    });
+  },
 
-function calculateBmi() {
-  var height = parseFloat(bmiform.height.value);
-  var weight = parseFloat(bmiform.weight.value);
-  if(weight > 0 && height > 0){
-    var BMI = calc_bmi(weight, height);
-    show_result.innerHTML = 'Your BMI is ' + BMI;
-    // Give health advice
-    if (BMI > 25) {
-   	  show_suggest.innerHTML = '你該節食了';
-    } else if (BMI < 20) {
-   	  show_suggest.innerHTML = '你該多吃點';
+  getAllElements: function browser_getAllElements() {
+
+    var elementIDs = [
+      'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest',
+      'about'];
+
+    // Loop and add element with camel style name to Modal Dialog attribute.
+    elementIDs.forEach(function createElementRef(name) {
+      this[this.toCamelCase(name)] = document.getElementById(name);
+    }, this);
+  },
+
+  get_bmi_value: function calc_bmi(height, weight) {
+    var val = weight / (height * height / 10000);
+    // console.log(val.toFixed(2));
+    return val.toFixed(2);
+  },
+
+  calculateBmi: function calculateBmi(e) {
+    e.preventDefault();
+    var height = parseFloat(bmi_form.height.value);
+    var weight = parseFloat(bmi_form.weight.value);
+    if (weight > 0 && height > 0) {
+      var BMI = this.get_bmi_value(height, weight);
+      bmi_result.innerHTML = 'Your BMI is ' + BMI;
+      // Give health advice
+      if (BMI > 25) {
+        bmi_suggest.innerHTML = '你該節食了';
+      } else if (BMI < 20) {
+        bmi_suggest.innerHTML = '你該多吃點';
+      } else {
+        bmi_suggest.innerHTML = '體型很棒喔';
+      }
     } else {
-   	  show_suggest.innerHTML = '體型很棒喔';
+      bmi_result.innerHTML = '';
+      bmi_suggest.innerHTML = '請輸入身高體重';
     }
-  } else {
-    show_result.innerHTML = '';
-    show_suggest.innerHTML = '請輸入身高體重';
-  }
-}
+  },
 
-function about_page() {
-  alert('ooxx');
-}
+  aboutPage: function about_page() {
+    alert('ooxx');
+  }
+};
+
+window.addEventListener('load', function browserOnLoad(evt) {
+  window.removeEventListener('load', browserOnLoad);
+  BMICalc.init();
+});
