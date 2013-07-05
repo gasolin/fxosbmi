@@ -2,7 +2,6 @@ if ('undefined' != typeof require) {
   // Require server-side-specific modules
   var chai = require('chai');
   var assert = chai.assert;
-  // var BMICalc = require('../../js/custom');
 }
 
 // TDD test example

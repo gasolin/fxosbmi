@@ -1,0 +1,10 @@
+{
+  "name": "FXOSBMI",
+  "version": "2.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt-cli": "*",
+    "grunt-manifest": "*"
+  }
+}
