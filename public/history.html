@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="style/input_areas.css">
     <link rel="stylesheet" type="text/css" href="style/buttons.css">
     <link rel="stylesheet" href="style/custom.css">
+    <link rel="stylesheet" type="text/css" href="style/lists.css">
   </head>
   <body role="application">
 
@@ -25,38 +26,30 @@
     <section role="region">
         <header>
         <menu type="toolbar">
-        <a href="#" id="about" class="hidden"><span class="icon-2x icon-lightbulb"></span></a>
-        <a href="history.html" id="history" class="hidden"><span class="icon-2x icon-suitcase"></span></a>
+        <a href="#" id="back" class="hidden"><span class="icon-2x icon-chevron-left"></span></a>
         </menu>
-        <h1><i class="icon-beaker"></i> BMI</h1>
+        <h1><i class="icon-beaker"></i> History</h1>
         </header>
-        <header>
-          <h2>Enter Height and Weight, press 'Calc' for result</h2>
-        </header>
+        <!--header>
+          <h2>Results list by time</h2>
+        </header-->
     </section>
 
     <!-- Add your site or application content here -->
     <section role="region">
-    <form id="bmi_form">
-      <fieldset>
-      <label for="height">Height (cm):</label>
-      <p>
-        <input id="height" type="number" placeholder="170" required>
-        <button type="reset">Clear</button>
-      </p>
-
-      <label for="weight">Weight (kg):</label>
-      <p>
-        <input id="weight" type="number" placeholder="70" required>
-        <button type="reset">Clear</button>
-      </p>
-      <p>
-      <button id="calc_bmi">Calc</button>
-      </p>
-      <p><span id="bmi_result"></span></p>
-      <p><span id="bmi_suggest"></span></p>
-      </fieldset>
-    </form>
+      <section data-type="list">
+      <header>Results list by time</header>
+      <ul>
+      <li>
+        <p>20.1</p>
+        <p><time date="2013/7/5">9:41PM</time></p>
+      </li>
+      <li>
+        <p>25.6</p>
+        <p><time date="2013/7/21">9:30PM</time></p>
+      </li>
+      </ul>
+      </section>
     </section>
 
     <!--<section role="status">
@@ -67,7 +60,7 @@
     <!-- App Install detection -->
     <script src="js/app_installer.js"></script>
 
-    <script src="js/custom.js"></script>
+    <!--script src="js/custom.js"></script-->
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--<script>
         var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];
