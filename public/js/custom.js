@@ -21,7 +21,7 @@ var BMICalc = {
   getAllElements: function browser_getAllElements() {
 
     var elementIDs = [
-      'main_page', 'history_page',
+      'main_page', 'history_page', 'main_hint',
       'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest',
       'menu_about', 'menu_calc', 'menu_history'];
 
@@ -69,6 +69,7 @@ var BMICalc = {
   switchView: function switch_view() {
     if (history_page.classList.contains('hidden')) {
       this.main_page.classList.add('hidden');
+      this.main_hint.classList.add('hidden');
       this.history_page.classList.remove('hidden');
       this.menu_history.classList.add('hidden');
       this.menu_calc.classList.remove('hidden');
@@ -93,6 +94,7 @@ var BMICalc = {
     } else {
       this.history_page.classList.add('hidden');
       this.main_page.classList.remove('hidden');
+      this.main_hint.classList.remove('hidden');
       this.menu_history.classList.remove('hidden');
       this.menu_calc.classList.add('hidden');
     }
