@@ -18,6 +18,8 @@
     <link rel="stylesheet" type="text/css" href="style/input_areas.css">
     <link rel="stylesheet" type="text/css" href="style/buttons.css">
     <link rel="stylesheet" href="style/custom.css">
+    <link rel="stylesheet" type="text/css" href="style/lists.css">
+    <script src="js/historydb.js"></script>
   </head>
   <body role="application">
 
@@ -25,8 +27,9 @@
     <section role="region">
         <header>
         <menu type="toolbar">
-        <a href="#" id="about" class="hidden"><span class="icon-2x icon-lightbulb"></span></a>
-        <a href="history.html" id="history" class="hidden"><span class="icon-2x icon-suitcase"></span></a>
+        <a href="#" id="menu_about"><span class="icon-2x icon-comment-alt"></span></a>
+        <a href="#" id="menu_calc" class="hidden"><span class="icon-2x icon-pencil"></span></a>
+        <a href="#" id="menu_history"><span class="icon-2x icon-bar-chart"></span></a>
         </menu>
         <h1><i class="icon-beaker"></i> BMI</h1>
         </header>
@@ -36,7 +39,7 @@
     </section>
 
     <!-- Add your site or application content here -->
-    <section role="region">
+    <section role="region" id="main_page">
     <form id="bmi_form">
       <fieldset>
       <label for="height">Height (cm):</label>
@@ -57,6 +60,22 @@
       <p><span id="bmi_suggest"></span></p>
       </fieldset>
     </form>
+    </section>
+
+    <section role="region" id="history_page" class="hidden">
+      <section data-type="list">
+      <header>Results list by time</header>
+      <ul id="bmi_hisory">
+        <!--<li>
+          <p>20.1</p>
+          <p><time date="2013/7/5">9:41PM</time></p>
+        </li>
+        <li>
+          <p>25.6</p>
+          <p><time date="2013/7/21">9:30PM</time></p>
+        </li>-->
+      </ul>
+      </section>
     </section>
 
     <!--<section role="status">
