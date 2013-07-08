@@ -6,8 +6,8 @@ var BMICalc = {
     this.getAllElements();
 
     this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
-    // this.menu_about.addEventListener('click', this.aboutPage);
 
+    this.menu_about.addEventListener('click', this.aboutPage);
     this.menu_calc.addEventListener('click', this.switchView.bind(this));
     this.menu_history.addEventListener('click', this.switchView.bind(this));
   },
