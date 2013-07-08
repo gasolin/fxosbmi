@@ -1,7 +1,5 @@
 'use strict';
 
-var indexedDB = window.indexedDB || window.webkitIndexedDB ||
-      window.mozIndexedDB || window.msIndexedDB;
 if (!window.indexedDB) {
   window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
 }
@@ -31,7 +29,7 @@ var History = {
   // general db constructor
   query: function ad_query(dbName, storeName, func, callback, data) {
 
-    var request = indexedDB.open(dbName, this.DB_VERSION);
+    var request = window.indexedDB.open(dbName, this.DB_VERSION);
 
     request.onsuccess = function(event) {
       func(request.result, storeName, callback, data);
@@ -142,28 +140,3 @@ var History = {
     };
   }
 };
-
-/*
-var History.DB = {
-  var request = indexedDB.open(dbName, 1);
-
-  request.onsuccess = function(event) {
-    func(request.result, storeName, callback, data);
-  };
-
-  request.onerror = function(event) {
-    console.error('Can\'t open database', dbName, event);
-  };
-
-  // DB init
-  request.onupgradeneeded = function(event) {
-    console.log('database upgrade needed, upgrading.');
-    var db = event.target.result;
-    if (db.objectStoreNames.contains(storeName))
-      db.deleteObjectStore(storeName);
-    db.createObjectStore(storeName, {keyPath: 'id', autoIncrement: true});
-    console.log('Upgrading db done');
-  };
-
-  _initDB
-};*/
