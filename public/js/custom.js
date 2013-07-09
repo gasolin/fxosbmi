@@ -1,34 +1,29 @@
 'use strict';
 
+function $(id) { return document.getElementById(id); }
+
 var BMICalc = {
 
   init: function calc_init() {
-    this.getAllElements();
+    this.main_page = $('main_page');
+    this.history_page = $('history_page');
+
+    // main page elements
+    this.main_hint = $('main_hint');
+    this.calc_bmi = $('calc_bmi');
+    this.bmi_form = $('bmi_form');
+    this.bmi_result = $('bmi_result');
+    this.bmi_suggest = $('bmi_suggest');
+    // menu
+    this.menu_about = $('menu_about');
+    this.menu_calc = $('menu_calc');
+    this.menu_history = $('menu_history');
 
     this.calc_bmi.addEventListener('click', this.calculateBmi.bind(this));
 
     this.menu_about.addEventListener('click', this.aboutPage);
     this.menu_calc.addEventListener('click', this.switchView.bind(this));
     this.menu_history.addEventListener('click', this.switchView.bind(this));
-  },
-
-  toCamelCase: function toCamelCase(str) {
-    return str.replace(/\-(.)/g, function replacer(str, p1) {
-      return p1.toUpperCase();
-    });
-  },
-
-  getAllElements: function browser_getAllElements() {
-
-    var elementIDs = [
-      'main_page', 'history_page', 'main_hint',
-      'calc_bmi', 'bmi_form', 'bmi_result', 'bmi_suggest',
-      'menu_about', 'menu_calc', 'menu_history'];
-
-    // Loop and add element with camel style name to Modal Dialog attribute.
-    elementIDs.forEach(function createElementRef(name) {
-      this[this.toCamelCase(name)] = document.getElementById(name);
-    }, this);
   },
 
   get_bmi_value: function calc_bmi(height, weight) {

@@ -5,18 +5,8 @@ if ('undefined' != typeof require) {
 }
 
 // TDD test example
-suite('Array', function() {
-  setup(function() {
-    //
-  });
-
-  suite('#indexOf()', function() {
-    test('should return -1 when not present', function() {
-      assert.equal(-1, [1, 2, 3].indexOf(4));
-    });
-  });
-
-  suite('BMI calc', function() {
+suite('BMI > ', function() {
+  suite('calc', function() {
     test('return value should consistant', function() {
       assert.equal(BMICalc.get_bmi_value(170, 70),
                    BMICalc.get_bmi_value(170, 70));
