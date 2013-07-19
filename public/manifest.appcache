@@ -1,9 +1,10 @@
 CACHE MANIFEST
-# Time: Tue Jul 09 2013 08:00:06 GMT+0800 (CST)
+# Time: Sat Jul 20 2013 00:03:28 GMT+0800 (CST)
 
 CACHE:
 index.html
 js/app_installer.js
+js/async_storage.js
 js/custom.js
 js/historydb.js
 style/action_menu.css

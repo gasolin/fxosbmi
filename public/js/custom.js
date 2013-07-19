@@ -24,6 +24,10 @@ var BMICalc = {
     this.menu_about.addEventListener('click', this.aboutPage);
     this.menu_calc.addEventListener('click', this.switchView.bind(this));
     this.menu_history.addEventListener('click', this.switchView.bind(this));
+
+    asyncStorage.getItem('HEIGHT', function(value) {
+      bmi_form.height.value = value;
+    });
   },
 
   get_bmi_value: function calc_bmi(height, weight) {
@@ -40,6 +44,8 @@ var BMICalc = {
       var BMI = this.get_bmi_value(height, weight);
       bmi_result.innerHTML = 'Your BMI is ' + BMI;
       // Store result
+      asyncStorage.setItem('HEIGHT', height);
+
       History.putRecord({'bmi': BMI, 'timestamp' : new Date().getTime()},
         null
       );
