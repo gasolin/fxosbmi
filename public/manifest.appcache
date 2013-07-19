@@ -1,6 +1,11 @@
 CACHE MANIFEST
 
 CACHE:
+index.html
+js/custom.js
+style/icons/favicon.ico
+style/icons/apple-touch-icon-precomposed.png
+style/icons/icon128.png
 
 NETWORK:
 *
