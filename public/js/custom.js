@@ -40,9 +40,7 @@ var BMICalc = {
       var BMI = this.get_bmi_value(height, weight);
       bmi_result.innerHTML = 'Your BMI is ' + BMI;
       // Store result
-      History.putRecord({'bmi': BMI, 'timestamp' : new Date().getTime()},
-        null
-      );
+
       // Give health advice
       if (BMI > 25) {
         bmi_suggest.innerHTML = '你該節食了';
@@ -72,20 +70,6 @@ var BMICalc = {
       // clean up
       bmi_history.innerHTML = '';
       // build
-      History.getList(function(items) {
-        // console.log(items);
-        for (var i = 0, len = items.length; i < len; i++) {
-          var li = document.createElement('li');
-          li.id = items[i].id;//alert(items[i].id);
-          var day = new Date(items[i].timestamp);
-          var logtime = (day.getYear() + 1900) + '/' +
-                        (day.getMonth() + 1) +
-                        '/' + day.getDate();
-          li.innerHTML = '<p>' + items[i].bmi + '</p>' +
-              '<p><time date="' + logtime + '">' + logtime + '</time></p>';
-          bmi_history.appendChild(li);
-        }
-      });
     } else {
       this.history_page.classList.add('hidden');
       this.main_page.classList.remove('hidden');
