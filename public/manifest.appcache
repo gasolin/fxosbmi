@@ -5,6 +5,3 @@ CACHE:
 
 NETWORK:
 *
-
-SETTINGS:
-prefer-online
