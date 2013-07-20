@@ -53,7 +53,7 @@ var History = {
 
   // if db exist, delete then create new one
   _initDB: function ad_initDB(db, storeName) {
-      const initData = [
+      var initData = [
         { bmi: "20.1", timestamp: new Date("2013/7/5").getTime() },
         { bmi: "25.6", timestamp: new Date("2013/7/21").getTime() }
       ];
